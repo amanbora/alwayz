@@ -20,8 +20,9 @@ from django.conf.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'', include('alwayz.urls')),
-    path(r'api-token-auth/', obtain_jwt_token),
-    path(r'api-token-auth/', refresh_jwt_token)
+    path('auth/', include('rest_auth.urls')),
+    path('auth/signup/', include('rest_auth.registration.urls')),
+    path('auth/refresh-token/', refresh_jwt_token),
+    path(r'', include('alwayz.urls'))
 
 ]

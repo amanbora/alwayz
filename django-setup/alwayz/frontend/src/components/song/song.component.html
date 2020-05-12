@@ -1,0 +1,16 @@
+<button (click)="logout()">logout</button>
+<br>
+<h1>Your Song for now -</h1>
+<div>
+  <p>Title - {{ran.title}}</p>
+  <p>Artist - {{ran.artist}}</p>
+  <p>Year - {{ran.year}}</p>
+  <a href = {{ran.web_url}}> Listen it Now!</a>
+
+</div>
+
+<br>
+
+<button class="like" (click)="liked()">
+  <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+</button>
