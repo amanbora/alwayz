@@ -1,20 +1,20 @@
 # alwayz
 
-#Installing Python3 & Django Requirements
+# Installing Python3 & Django Requirements
 - `virtualenv -p python3 env`
 - `source env/bin/activate`
 - `pip install requirements.txt`
 
-#Installing Angular Dependencies
+# Installing Angular Dependencies
 - `cd django-setup/alwayz/frontend`
 - `npm install`
 
-#Run django
+# Run django
 - `cd django-setup`
 - `python manage.py runserver`
 - Listen at port `localhost:8000`
 
-#Run Angular
+# Run Angular
 - `cd alwayz/frontend`
 - `ng build --prod`
 - `ng serve`
