@@ -10,7 +10,7 @@ import {throwError} from 'rxjs';
 export class AppComponent implements OnInit{
   title = 'frontend';
   public user: any;
-  constructor(private userService: UserService) {}
+  constructor(public userService: UserService) {}
 
   ngOnInit() {
     this.user = {
