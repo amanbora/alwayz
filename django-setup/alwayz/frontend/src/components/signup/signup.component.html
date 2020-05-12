@@ -4,10 +4,27 @@
   </h1>
 </div>
 
-<input #username type='text' placeholder='username'>
-<input #email type='text' placeholder='email'>
-<input #password1 type='password' placeholder='password1'>
-<input #password2 type='password' placeholder='password2'>
-<button (click)="signup(username.value, email.value, password1.value, password2.value)">signup</button>
+
+<form>
+  <div class="form-group">
+    <input #email  class="form-control" type="text"  aria-describedby="emailHelp" placeholder="Enter Email">
+  </div>
+
+  <div class="form-group">
+    <input #username  class="form-control" type="text" placeholder="Enter username">
+  </div>
+
+  <div class="form-group">
+    <input #password1 type="password" class="form-control"  placeholder="Password">
+  </div>
+
+  <div class="form-group">
+    <input #password2 type="password" class="form-control" placeholder="Enter Password Again">
+  </div>
+
+  <button class="btn btn-primary" (click)="signup(username.value, email.value, password1.value, password2.value)">signup</button>
+</form>
+
+
 <p>{{ error?.message }}</p>
 <p *ngIf="error">{{ error?.error | json }}</p>
